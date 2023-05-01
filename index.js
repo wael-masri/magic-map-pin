@@ -1,10 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const usersRoute = require("./routes/users");
 const pinsRoute = require("./routes/pins");
 require("dotenv").config({ path: "./config.env" });
 const app = express();
-
+app.use(cors());
 app.use(express.json());
 //FOR CONNECTION WITH DATA BASE MONGO DB 
 mongoose
